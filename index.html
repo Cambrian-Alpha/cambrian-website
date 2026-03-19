@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cambrian</title>
-  <meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambrian</title>
+
+<style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #050505;
+    color: #eaeaea;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* subtle animated gradient glow */
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center,
+        rgba(40,40,40,0.35),
+        rgba(0,0,0,0) 60%);
+    animation: drift 12s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes drift {
+    from { transform: translate(-5%, -5%); }
+    to { transform: translate(5%, 5%); }
+}
+
+.container {
+    max-width: 700px;
+    padding: 40px;
+}
+
+.logo {
+    font-size: 34px;
+    letter-spacing: 6px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #9a9a9a;
+    letter-spacing: 1px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+}
+
+</style>
 </head>
+
 <body>
-  <h1>Cambrian</h1>
-  <p>AI-first infrastructure for the physical world.</p>
+
+<div class="container">
+
+<div class="logo">
+CAMBRIAN
+</div>
+
+<div class="tagline">
+Spatial Intelligence that Makes the Physical World.
+</div>
+
+<div class="footer">
+© 2026
+</div>
+
 </body>
 </html>
